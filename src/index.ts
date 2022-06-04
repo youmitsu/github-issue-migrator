@@ -7,11 +7,13 @@ export const sleep = (msec: number): Promise<void> =>
 
 const run = async () => {
   const token = config.get('githubAccessToken')
+  const owner = config.get('owner')
+  const repo = config.get('repo')
 
   const octokit = new Octokit({ auth: token })
   const { data } = await octokit.rest.issues.listForRepo({
-    owner: 'Haianh9999',
-    repo: 'Keypace',
+    owner,
+    repo,
     page: 2,
   })
   let index = 0
@@ -21,8 +23,8 @@ const run = async () => {
     const body = d.body ?? ''
     await sleep(5000)
     octokit.rest.issues.create({
-      owner: 'Keypace',
-      repo: 'Keypace',
+      owner,
+      repo,
       title,
       body,
     })
