@@ -1,5 +1,11 @@
 {
   "githubAccessToken": "",
-  "owner": "",
-  "repo": ""
+  "source": {
+    "owner": "",
+    "repo": ""
+  },
+  "dest": {
+    "owner": "",
+    "repo": ""
+  }
 }
