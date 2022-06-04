@@ -1,0 +1,14 @@
+{
+  "name": "github-issue-migrator",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "init": "tsc init",
+    "build": "tsc",
+    "start": "yarn build && node src/index.js"
+  },
+  "dependencies": {
+    "typescript": "^4.7.3"
+  }
+}
